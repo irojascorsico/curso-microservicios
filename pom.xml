@@ -17,6 +17,7 @@
 	<modules>
 		<module>config-server</module>
 		<module>discovery-server</module>
+		<module>microservices</module>
 	</modules>
 	<properties>
 		<java.version>24</java.version>
