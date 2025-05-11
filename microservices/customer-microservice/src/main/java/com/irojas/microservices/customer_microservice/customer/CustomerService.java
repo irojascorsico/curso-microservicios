@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.irojas.microservices.customer_microservice.exceptions.CustomerNotFoundException;
+
 import lombok.RequiredArgsConstructor;
 
 @Service
@@ -22,7 +24,8 @@ public class CustomerService {
         return repository
             .findById(customerId)
             .map(mapper::toCustomerResponse)
-            .orElseThrow();
+            .orElseThrow(() -> new CustomerNotFoundException(
+                String.format("Customer with id %s not found", customerId)));
     }
 
     public List<CustomerResponse> getCustomers() {
@@ -35,7 +38,8 @@ public class CustomerService {
     public void deleteCustomerById(String customerId) {
         repository
             .findById(customerId)
-            .orElseThrow();
+            .orElseThrow(() -> new CustomerNotFoundException(
+                String.format("Customer with id %s not found", customerId)));
         repository.deleteById(customerId);
     }
 

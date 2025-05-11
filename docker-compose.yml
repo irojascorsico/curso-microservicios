@@ -5,7 +5,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - mongo:/data
+      - mongo:/data/db
     restart: always
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
