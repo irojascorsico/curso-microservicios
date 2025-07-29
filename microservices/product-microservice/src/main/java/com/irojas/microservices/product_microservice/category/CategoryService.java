@@ -38,7 +38,7 @@ public class CategoryService {
 
     public Integer updateCategory(CategoryRequest request) {
         Category category = mapper.toCategory(request);
-        if (request == null || request.id() == null) {
+        if (request.id() == null) {
             throw new CategoryException("Category ID cannot be null");
         }
         else if (!repository.existsById(request.id())) {

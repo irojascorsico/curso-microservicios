@@ -45,7 +45,7 @@ public class ProductService {
 
 
     public Integer updateProduct(ProductRequest request) {
-        if (request == null || request.id() == null) {
+        if (request.id() == null) {
             throw new ProductException("Product ID cannot be null");
         }
         
