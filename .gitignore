@@ -35,3 +35,6 @@ build/
 ### Ignore log files ###
 *.log
 
+# Ignorar archivos de configuración sensibles (LO DEJO EN CONTROL DE VERSIONES 
+# PARA QUE PUEDAN USARLO SI QUIEREN, PERO DEBERÍA ESTAR EXCLUIDO)
+# *.env 
