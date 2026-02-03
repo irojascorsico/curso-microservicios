@@ -9,11 +9,11 @@ Este proyecto está acompañado por una serie de videos en YouTube donde se expl
 - [Discovery Server (Eureka)](https://youtu.be/MBBl6lIFvPQ?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
 - [Microservicio de Clientes](https://youtu.be/CBAVpdqEa4U?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
 - [Manejo de Excepciones](https://youtu.be/FOiGQA1mMTM?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
-- [Loogging - Logback](https://youtu.be/AFStwdGYHHM?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
+- [Logging - Logback](https://youtu.be/AFStwdGYHHM?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
 - [Microservicio de Productos](https://youtu.be/8G4PzU_4Jzw?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
 - [Orquestación con Docker Compose](https://youtu.be/UQoSrMn96TI?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
 
-> 💡 Revisa la playlist completa aquí: [Curso de Microservicios - Playlist](youtube.com/watch?v=rC5ES1vmRmc&list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4&pp=0gcJCbUEOCosWNinsAgC)
+> 💡 Revisa la playlist completa aquí: [Curso de Microservicios - Playlist](https://youtube.com/playlist?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4&si=98zajHASHceDICVY)
 
 
 **Estructura Actual**
