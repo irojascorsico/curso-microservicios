@@ -3,46 +3,42 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.irojas</groupId>
-	    <artifactId>ecommerce</artifactId>
-	    <version>0.0.1-SNAPSHOT</version>
+		<groupId>com.irojas.microservices</groupId>
+		<artifactId>microservices</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<groupId>com.irojas.microservices</groupId>
-	<artifactId>microservices</artifactId>
+	<artifactId>cart-microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>microservices</name>
-	<description></description>
-    <packaging>pom</packaging>
-    <modules>
-		<module>common-exceptions</module>
-        <module>customer-microservice</module>
-		<module>product-microservice</module>
-		<module>cart-microservice</module>
-    </modules>
+	<name>cart-microservice</name>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mongodb-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.irojas.microservices</groupId>
+			<artifactId>common-exceptions</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>

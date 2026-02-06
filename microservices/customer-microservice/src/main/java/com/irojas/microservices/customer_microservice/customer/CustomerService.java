@@ -24,8 +24,7 @@ public class CustomerService {
         return repository
             .findById(customerId)
             .map(mapper::toCustomerResponse)
-            .orElseThrow(() -> new CustomerNotFoundException(
-                String.format("Customer with id %s not found", customerId)));
+            .orElse(null);
     }
 
     public List<CustomerResponse> getCustomers() {
