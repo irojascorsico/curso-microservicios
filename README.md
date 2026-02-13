@@ -12,6 +12,7 @@ Este proyecto está acompañado por una serie de videos en YouTube donde se expl
 - [Logging - Logback](https://youtu.be/AFStwdGYHHM?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
 - [Microservicio de Productos](https://youtu.be/8G4PzU_4Jzw?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
 - [Orquestación con Docker Compose](https://youtu.be/UQoSrMn96TI?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4)
+- [Open Feign](https://youtu.be/pMnC6VpsLWY)
 
 > 💡 Revisa la playlist completa aquí: [Curso de Microservicios - Playlist](https://youtube.com/playlist?list=PLx89vzy-Ta0pvP5yEdr4KPePSQREJywa4&si=98zajHASHceDICVY)
 
