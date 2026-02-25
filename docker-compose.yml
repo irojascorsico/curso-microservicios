@@ -133,6 +133,24 @@ services:
     networks:
       - microservices
 
+  api-gateway:
+    build: 
+      context: .
+      dockerfile: ./api-gateway/Dockerfile
+    container_name: api-gateway
+    depends_on:
+      config-server:
+        condition: service_healthy
+      discovery-server:
+        condition: service_healthy
+    ports:
+      - "${API_GATEWAY_PORT}:8222"
+    environment:
+      - SPRING_CONFIG_IMPORT=configserver:http://config-server:${CONFIG_SERVER_PORT}
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:${EUREKA_SERVER_PORT}/eureka/
+    networks:
+      - microservices
+
 volumes:
   mongo:
   postgres:
