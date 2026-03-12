@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'ecommerce-microservices'
+    metrics_path: '/actuator/prometheus'
+    eureka_sd_configs:
+      - server: 'http://discovery-server:8761/eureka'
+    relabel_configs:
+      - source_labels: [__meta_eureka_app_name]
+        target_label: application
+      - source_labels: [__meta_eureka_instance_port]
+        target_label: instance_port

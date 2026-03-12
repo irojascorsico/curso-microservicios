@@ -1,5 +1,6 @@
 server:
   port: 8092
+  
 spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL}
@@ -27,4 +28,13 @@ logging:
     name: logs/product-microservice.log
     max-size: 10MB
     max-history: 30
+
+management: 
+    endpoints:
+        web:
+            exposure:
+                include: health, info, prometheus
+    endpoint:
+        health:
+            show-details: always 
 
