@@ -31,3 +31,13 @@ management:
     endpoint:
         health:
             show-details: always 
+
+springdoc:
+  openapi:
+    info:
+      title: Cart Microservice API
+      description: Service for managing shopping carts in the e-commerce application.
+      version: 1.0.0
+      contact:
+        name: Equipo de Soporte
+        email: support@mail.com

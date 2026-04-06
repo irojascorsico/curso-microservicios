@@ -8,14 +8,23 @@ spring:
               uri: lb://customer-microservice
               predicates:
                 - Path=/api/v1/customers/**
+              filters:
+                - PreserveHostHeader
+                - RewritePath=/api/v1/customers/v3/api-docs, /v3/api-docs    
             - id: product-microservice
               uri: lb://product-microservice
               predicates:
                 - Path=/api/v1/products/**
+              filters:
+                - PreserveHostHeader
+                - RewritePath=/api/v1/products/v3/api-docs, /v3/api-docs
             - id: cart-microservice
               uri: lb://cart-microservice
               predicates:
                 - Path=/api/v1/cart/**
+              filters:
+                - PreserveHostHeader
+                - RewritePath=/api/v1/cart/v3/api-docs, /v3/api-docs  
 
 eureka:
   client:
@@ -42,3 +51,13 @@ management:
     endpoint:
         health:
             show-details: always 
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: Customer Microservice
+        url: /api/v1/customers/v3/api-docs
+      - name: Product Microservice
+        url: /api/v1/products/v3/api-docs
+      - name: Cart Microservice
+        url: /api/v1/cart/v3/api-docs

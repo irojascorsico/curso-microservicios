@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -16,6 +17,7 @@ public class CartController {
 
     private final CartService cartService;
 
+    @Operation(summary = "Get the cart for a specific customer", description = "Retrieves the shopping cart for the specified customer.")
     @GetMapping()
     public ResponseEntity<CartResponse> getCartByCustomerId(@PathVariable("customerId") String customerId) {
         CartResponse cartResponse = cartService.getCartByCustomerId(customerId);
